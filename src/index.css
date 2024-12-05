@@ -5,9 +5,136 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-size: 15px;
+  background-color: hsl(0, 0%, 98%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+ 
+
+.container{
+  width: 80%;
+  margin: 3rem auto;
+  
+   
+}
+
+.poppinsRegular{
+  font-family: 'poppins', sans-serif;
+  font-weight: 200;
+}
+
+.poppinsBold{
+  font-family: 'poppins', sans-serif;
+  font-weight: 400;
+}
+.poppinsBlack{
+  font-family: 'poppins', sans-serif;
+  font-weight: 600;
+}
+
+.header--text{
+  text-align: center;
+}
+
+.myGrid{
+  padding-top: 3em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 2em;
+ 
+
+}
+
+.myGrid > div{
+  border-radius: 10px;
+}
+
+.team-builder{
+  grid-column: 2/3;
+  grid-row: 1/3;
+  border-top: 4px solid hsl(0, 78%, 62%);
+  box-shadow:  0 4px 4px 1px hsl(229, 6%, 66%);
+  padding: 2em;
+  background-color: #fff;
+}
+.team-builder img{
+  padding-top: 3em;
+  position: relative;
+  left: 80%;
+}
+.supervisor{
+  grid-column: 1/2;
+  grid-row: 2/4;
+  border-top: 4px solid hsl(180, 62%, 55%);
+  box-shadow:  0 4px 4px 1px hsl(229, 6%, 66%);
+  padding: 2em;
+  background-color: #fff;
+  
+}
+ 
+.supervisor img{
+  padding-top: 3em;
+  position: relative;
+  left: 80%;
+}
+
+.calculator{
+  grid-column: 3/4;
+  grid-row: 2/4;
+  border-top: 4px solid hsl(212, 86%, 64%);
+  box-shadow: 0 4px 4px 1px hsl(229, 6%, 66%);
+  padding: 2em;
+}
+.calculator img{
+  padding-top: 3em;
+  position: relative;
+  left: 80%;
+}
+.karma{
+  grid-column: 2/3;
+  grid-row: 3/5;
+  border-top: 4px solid  hsl(34, 97%, 64%);
+  box-shadow: 0 4px 4px 1px hsl(229, 6%, 66%);
+  padding: 2em;
+}
+.karma img{
+  padding-top: 3em;
+  position: relative;
+  left: 80%;
+}
+
+@media screen and (max-width: 48rem) {
+  .body{
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .container{
+    width: 100%;
+    padding: 2em;
+    box-sizing: inherit;
+  }
+  .myGrid{
+    display: flex;
+    flex-wrap: wrap;
+    
+  
+  }
+  .supervisor{
+   width: 100%;
+  }
+  .team-builder{
+    width: 100%;
+  }
+  .calculator{
+    width: 100%;
+  }
+  .karma{
+    width: 100%;
+  }
 }
